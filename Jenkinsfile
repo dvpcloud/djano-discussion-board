@@ -1,9 +1,7 @@
 pipeline{
     agent {
         dockerfile{
-            filename 'app_Dockerfile'
-            args '-t dvpcloud/dj-discuss'
-        }
+            filename 'app_Dockerfile'            
     }
     stages {
             stage("Build docker image"){
