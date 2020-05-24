@@ -10,7 +10,7 @@ pipeline{
                       branch master
                   }                  
                   steps{
-                      sh 'python -V'                      
+                      echo "completed"                     
                   }
             }
     }
