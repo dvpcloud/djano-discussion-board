@@ -11,6 +11,7 @@ pipeline{
           }
           steps{
               sh 'echo python -V'
+              sh "echo $PATH"
           }
     }
 }
