@@ -2,7 +2,6 @@ pipeline{
     agent {
         dockerfile{
             filename 'app_Dockerfile'
-            label 'dj-discuss1'
             args '-t dvpcloud/dj-discuss'
         }
     }
