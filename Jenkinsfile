@@ -1,5 +1,5 @@
 pipeline{
-    ageny any
+    agent any
     stages("Build docker image"){
           when {
               branch master
