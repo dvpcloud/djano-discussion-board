@@ -28,6 +28,7 @@
                 "sha256:051ba55d42daa3eeda3944a8e4df2bc96d4c62f94316dea217248a22563c3621",
                 "sha256:9aaa6a09678e1b8f0d98a948c56482eac3e3dd2ddbfb8de70a868135ef3b5e01"
             ],
+            "index": "pypi",
             "version": "==3.0.6"
         },
         "django-widget-tweaks": {
@@ -35,6 +36,7 @@
                 "sha256:9f91ca4217199b7671971d3c1f323a2bec71a0c27dec6260b3c006fa541bc489",
                 "sha256:f80bff4a8a59b278bb277a405a76a8b9a884e4bae7a6c70e78a39c626cd1c836"
             ],
+            "index": "pypi",
             "version": "==1.4.8"
         },
         "pytz": {

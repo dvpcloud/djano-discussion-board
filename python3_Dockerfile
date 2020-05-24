@@ -1,0 +1,22 @@
+FROM ubuntu:latest
+RUN apt-get -y update && apt-get -y install curl gcc tar make vim \
+    build-essential \
+    zlib1g-dev \
+    libncurses5-dev \ 
+    libgdbm-dev \
+    libnss3-dev \ 
+    libssl-dev \
+    libreadline-dev \
+    libffi-dev \
+    libsqlite3-dev
+RUN mkdir -p /opt/python3 && mkdir /app
+RUN curl https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz -o /opt/python3/python3.8.2.tgz
+RUN tar -xzf /opt/python3/python3.8.2.tgz -C /opt/python3
+RUN /opt/python3/Python-3.8.2/configure --enable-optimizations --with-ensurepip=install
+RUN make altinstall 
+RUN pip3.8 install --upgrade pip
+WORKDIR /app
+RUN pip3.8 install pipenv 
+
+
+
