@@ -1,7 +1,8 @@
 pipeline{
     agent {
         dockerfile{
-            filename 'app_Dockerfile'            
+            filename 'app_Dockerfile' 
+        }           
     }
     stages {
             stage("Build docker image"){
