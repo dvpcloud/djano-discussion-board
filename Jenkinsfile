@@ -5,10 +5,7 @@ pipeline{
                   steps{
                       script {
 
-                            app_image = docker.build("dvpcloud/django:${env.BUILD_NUMBER}")
-                            app_image.inside {
-                                sh 'echo ${curl 127.0.0.1:8000)'
-                            }  
+                            app_image = docker.build("dvpcloud/django:${env.BUILD_NUMBER}")                             
                         }                
                     }
                }
