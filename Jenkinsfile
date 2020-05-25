@@ -1,9 +1,9 @@
 pipeline{   
     agent any
     stages {
-            stage("Build docker image"){
+            stage('Build docker image'){
                   when {
-                      branch master
+                      branch 'master'
                   }                  
                   steps{
                       script {
@@ -15,13 +15,13 @@ pipeline{
                       }                
                   }
             }
-            stage ("Push Docker Image") {
+            stage ('Push Docker Image') {
                 when {
-                    branch master
+                    branch 'master'
                 }
                 steps{
                     script{
-                        docker.withRegistry("https://registry.hub.docker.com","docker_hub") {
+                        docker.withRegistry('https://registry.hub.docker.com','docker_hub') {
                             app_image.push("dvpcloud/django:${env.BUILD_ID}")
                         }
                     }
