@@ -9,12 +9,12 @@ pipeline{
                             app_image.inside {
                                 sh 'echo ${curl 127.0.0.1:8000)'
                             }  
-                      }                
-                  }
-            }
+                        }                
+                    }
+               }
             stage ('Push Docker Image') {                
-                steps{
-                    script{
+                steps {
+                    script {
                         docker.withRegistry('https://registry.hub.docker.com','docker_hub') {
                             app_image.push("dvpcloud/django:${env.BUILD_ID}")
                         }
