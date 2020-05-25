@@ -18,6 +18,17 @@ pipeline{
                     }
                 }
             }
+            stage('pull docker image') {
+                agent {
+                    docker { 
+                        image "dvpcloud/django:${env.BUILD_NUMBER}"
+                        
+                        }
+                }
+                steps{
+                    sh 'echo check '
+                }
+            }
 
     }
 }
