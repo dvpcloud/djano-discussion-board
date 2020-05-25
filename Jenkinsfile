@@ -1,10 +1,7 @@
 pipeline{   
     agent any
     stages {
-            stage('Build docker image'){
-                  when {
-                      branch 'master'
-                  }                  
+            stage('Build docker image'){                                  
                   steps{
                       script {
 
@@ -15,10 +12,7 @@ pipeline{
                       }                
                   }
             }
-            stage ('Push Docker Image') {
-                when {
-                    branch 'master'
-                }
+            stage ('Push Docker Image') {                
                 steps{
                     script{
                         docker.withRegistry('https://registry.hub.docker.com','docker_hub') {
