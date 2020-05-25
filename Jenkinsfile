@@ -1,8 +1,5 @@
-pipeline{
-    agent {
-       
-        }           
-    }
+pipeline{   
+    agent any
     stages {
             stage("Build docker image"){
                   when {
@@ -10,7 +7,7 @@ pipeline{
                   }                  
                   steps{
                     def  app_image = docker.build("django:${env.BUILD_ID}")  
-                                     
+
                   }
             }
     }
