@@ -1,7 +1,6 @@
 pipeline{
     agent {
-        dockerfile{
-            filename 'app_Dockerfile' 
+       
         }           
     }
     stages {
@@ -10,7 +9,8 @@ pipeline{
                       branch master
                   }                  
                   steps{
-                      echo "completed"                     
+                    def  app_image = docker.build("django:${env.BUILD_ID}")  
+                                     
                   }
             }
     }
