@@ -13,7 +13,7 @@ pipeline{
                 steps {
                     script {
                         docker.withRegistry('https://registry.hub.docker.com','docker_hub') {
-                            app_image.push("dvpcloud/django:${env.BUILD_ID}")
+                            app_image.push()
                         }
                     }
                 }
